@@ -9,7 +9,6 @@
 @import url('./header.css');
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -22,4 +21,85 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+.text-link {
+  font-family: Montserrat, sans-serif;
+  color: black;
+  margin-left: 26px;
+  border-style: solid;
+  border-color: blue;
+  border-width: 1px;
+}
+.timer-box {
+  margin-left: 105px;
+  margin-top: 40px;
+}
+#datetime-picker {
+  margin-right: 8px;
+  padding: 6px;
+  width: 272px;
+  border-radius: 4px;
+  border-width: 0.5px;
+  border-color: #808080;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  outline: none;
+}
+#datetime-picker:hover,
+#datetime-picker:focus {
+  border-color: black;
+}
+#datetime-picker:active {
+  border-color: #4e75ff;
+}
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  background: #4e75ff;
+  border: none;
+}
+button:hover,
+button:focus {
+  background: #6c8cff;
+}
+.timer {
+  display: flex;
+  margin-top: 20px;
+  width: 346px;
+  height: 72px;
+  gap: 24px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+}
+.value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  text-align: center;
+}
+.label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+  text-align: center;
+  margin-top: 5px;
 }
