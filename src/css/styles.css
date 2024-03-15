@@ -70,10 +70,6 @@
   background: #cfcfcf;
   border: none;
 }
-.btn-timer:active {
-  background: #6c8cff;
-  color: #fff;
-}
 
 .timer {
   display: flex;
@@ -82,6 +78,15 @@
   height: 72px;
   gap: 24px;
 }
+.btn-active {
+  background: #4e75ff;
+  color: #fff;
+}
+.btn-active:hover,
+.btn-active:focus {
+  background: #6c8cff;
+}
+
 .field {
   display: flex;
   flex-direction: column;

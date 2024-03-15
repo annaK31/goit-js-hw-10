@@ -14,8 +14,7 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     userSelectedDate = selectedDates[0];
-    timeInterval = userSelectedDate - options.defaultDate;
-
+    timeInterval = userSelectedDate - new Date();
     if (timeInterval < 1) {
       iziToast.error({
         color: 'red',
@@ -25,6 +24,7 @@ const options = {
     } else {
       startBtn.disabled = false;
       inputTime.disabled = true;
+      startBtn.classList.add(`btn-active`);
     }
   },
 };
@@ -60,6 +60,7 @@ startBtn.disabled = true;
 startBtn.addEventListener('click', event => {
   const repeatTime = setInterval(() => {
     timeInterval = userSelectedDate - new Date();
+    startBtn.classList.remove(`btn-active`);
     if (timeInterval < 1) {
       startBtn.disabled = true;
       clearInterval(repeatTime);
