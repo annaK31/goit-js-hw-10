@@ -22,9 +22,9 @@ const options = {
         message: `Please choose a date in the future`,
       });
     } else {
-      startBtn.disabled = false;
+      startButton.disabled = false;
       inputTime.disabled = true;
-      startBtn.classList.add(`btn-active`);
+      startButton.classList.add(`btn-active`);
     }
   },
 };
@@ -50,20 +50,20 @@ function convertMs(ms) {
 
 const calendar = flatpickr('#datetime-picker', options);
 const inputTime = document.querySelector('#datetime-picker');
-const startBtn = document.querySelector('button');
+const startButton = document.querySelector('button');
 const showTime = document.querySelectorAll('.value');
 
 console.log(showTime);
 
-startBtn.disabled = true;
+startButton.disabled = true;
 
-startBtn.addEventListener('click', event => {
-  const repeatTime = setInterval(() => {
+startButton.addEventListener('click', event => {
+  const intervalId = setInterval(() => {
     timeInterval = userSelectedDate - new Date();
-    startBtn.classList.remove(`btn-active`);
+    startButton.classList.remove(`btn-active`);
     if (timeInterval < 1) {
-      startBtn.disabled = true;
-      clearInterval(repeatTime);
+      startButton.disabled = true;
+      clearInterval(intervalId);
       return;
     }
     const timer = convertMs(timeInterval);
