@@ -11,9 +11,9 @@ delayForm.addEventListener('submit', event => {
     setTimeout(() => {
       console.log(timer, radio);
       if (radio === 'fulfilled') {
-        resolve();
+        resolve(timer);
       } else {
-        reject();
+        reject(timer);
       }
     }, timer);
   });
